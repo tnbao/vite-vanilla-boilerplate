@@ -1,0 +1,28 @@
+{
+  "name": "vanilla-boilerplate",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --base=./",
+    "preview": "vite preview",
+    "lint:js": "eslint --ext \".js\" --ignore-path .gitignore",
+    "lint:style": "stylelint \"**/*.{css,scss,sass,html}\" --ignore-path .gitignore",
+    "lint:prettier": "prettier --check .",
+    "lint": "npm run lint:js && npm run lint:style && npm run lint:prettier",
+    "lintfix": "prettier --write --list-different . && npm run lint:js -- --fix && npm run lint:style -- --fix"
+  },
+  "devDependencies": {
+    "eslint": "^8.43.0",
+    "eslint-config-prettier": "^8.8.0",
+    "postcss-html": "^1.5.0",
+    "prettier": "^2.8.8",
+    "sass": "^1.63.4",
+    "stylelint": "^15.8.0",
+    "stylelint-config-prettier": "^9.0.5",
+    "stylelint-config-standard": "^33.0.0",
+    "vite": "^4.3.9",
+    "vite-plugin-full-reload": "^1.0.5",
+    "vite-plugin-handlebars": "^1.6.0"
+  }
+}
